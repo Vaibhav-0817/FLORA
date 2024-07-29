@@ -7,7 +7,7 @@ import styles from "../styles/styles";
 import { TfiGallery } from "react-icons/tfi";
 import socketIo from "socket.io-client";
 import { format } from "timeago.js";
-const ENDPOINT = "http://localhost:4000/";
+const ENDPOINT = "https://flora-socket.onrender.com/";
 const socketId = socketIo(ENDPOINT, { transports: ["websocket"] });
 
 const DashboardMessages = () => {

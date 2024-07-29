@@ -1,1 +1,1 @@
-export const server = "http://localhost:8000/api";
+export const server = "https://flora-backend-047m.onrender.com//api";

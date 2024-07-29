@@ -9,7 +9,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineSend } from "react-icons/ai";
 import { TfiGallery } from "react-icons/tfi";
-const ENDPOINT = "http://localhost:4000/";
+const ENDPOINT = "https://flora-socket.onrender.com/";
 const socketId = socketIo(ENDPOINT, { transports: ["websocket"] });
 
 const UserInbox = () => {
