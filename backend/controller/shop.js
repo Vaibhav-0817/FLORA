@@ -40,7 +40,7 @@ router.post("/create-shop", async (req, res, next) => {
       };
 
       const activationToken = createActivationToken(seller);
-      const activationUrl = `http://localhost:3000/seller/activation/${activationToken}`;
+      const activationUrl = `https://flora-frontend-g2yg.onrender.com/seller/activation/${activationToken}`;
 
       try {
         await sendMail({
