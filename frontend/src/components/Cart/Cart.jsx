@@ -26,7 +26,7 @@ const Cart = ({ setOpenCart }) => {
   };
   return (
     <div className="fixed top-0 left-0 w-full h-screen bg-[#00000070] z-10">
-      <div className="fixed top-0 right-0 z-20 bg-white flex flex-col justify-between min-h-screen shadow-sm w-1/4 min-w-[288px] overflow-y-scroll">
+      <div className="fixed top-0 right-0 z-20 bg-white flex flex-col justify-between min-h-screen shadow-sm w-1/4 min-w-[288px]">
         {cart && cart.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center">
             <div className="flex w-full justify-end pt-5 pr-5 fixed top-3 right-3">
@@ -41,7 +41,7 @@ const Cart = ({ setOpenCart }) => {
           </div>
         ) : (
           <>
-            <div>
+            <div className="overflow-y-scroll">
               <div className="flex w-full justify-end pt-5 pr-5">
                 <RxCross1
                   size={25}
