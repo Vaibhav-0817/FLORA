@@ -1,0 +1,69 @@
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { AiOutlineGift } from "react-icons/ai";
+import { MdOutlineLocalOffer } from "react-icons/md";
+import {FiPackage, FiShoppingBag} from 'react-icons/fi'
+import { BiMessageSquareDetail } from "react-icons/bi";
+
+const DashboardHeader = () => {
+  const {seller} = useSelector((state) => state.seller);
+  return (
+    <div className="h-[80px] left-0 top-0 z-30 flex items-center justify-between px-4">
+      <div>
+        <Link to="/dashboard">
+          <img
+            src={logo}
+            className="h-[50px] max-w-[150px] object-contain"
+            alt="logo"
+          />
+        </Link>
+      </div>
+      <div className="flex items-center">
+        <div className="flex items-center mr-4">
+          <Link to="/dashboard/coupons" className='800px:block hidden'>
+            <AiOutlineGift
+              size={30}
+              className="mx-5 cursor-pointer"
+              color="#fff"
+            />
+          </Link>
+          <Link to="/dashboard-events" className='800px:block hidden'>
+            <MdOutlineLocalOffer
+              size={30}
+              className="mx-5 cursor-pointer"
+              color="#fff"
+            />
+          </Link>
+          <Link to="/dashboard-products" className='800px:block hidden'>
+            <FiShoppingBag
+              size={30}
+              className="mx-5 cursor-pointer"
+              color="#fff"
+            />
+          </Link>
+          <Link to="/dashboard-orders" className='800px:block hidden'>
+            <FiPackage
+              size={30}
+              className="mx-5 cursor-pointer"
+              color="#fff"
+            />
+          </Link>
+          <Link to="/dashboard-messages" className='800px:block hidden'>
+            <BiMessageSquareDetail
+              size={30}
+              className="mx-5 cursor-pointer"
+              color="#fff"
+            />
+          </Link>
+          <Link to={`/shop/${seller._id}`}>
+            <img src={`${seller.avatar.url}`} alt="" className="w-11 h-11 rounded-full object-cover border-[2px] border-pink-500"></img>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DashboardHeader;
