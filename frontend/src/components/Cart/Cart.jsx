@@ -41,7 +41,7 @@ const Cart = ({ setOpenCart }) => {
           </div>
         ) : (
           <>
-            <div className="overflow-y-scroll">
+            <div>
               <div className="flex w-full justify-end pt-5 pr-5">
                 <RxCross1
                   size={25}
@@ -56,7 +56,7 @@ const Cart = ({ setOpenCart }) => {
                 </h5>
               </div>
               <br />
-              <div className="w-full border-t">
+              <div className="w-full border-t !overflow-y-scroll">
                 {cart &&
                   cart.map((i, index) => {
                     return (
