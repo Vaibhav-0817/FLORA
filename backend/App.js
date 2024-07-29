@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const cors = require("cors");
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://flora-frontend-g2yg.onrender.com/',
   credentials: true,
 }));
 app.use(express.json({limit: '5mb'}));
