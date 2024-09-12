@@ -38,6 +38,9 @@ app.use('/api/payment',payment)
 app.use('/api/order',order)
 app.use("/api/conversation",conversation);
 app.use("/api/messages",messages);
+app.get('/',(req,res)=>{
+  res.send('<h1>Hello Backend</h1>')
+})
 //for error handling
 app.use(ErrorHandler);
 
